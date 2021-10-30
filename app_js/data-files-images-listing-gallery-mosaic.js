@@ -145,8 +145,64 @@ const dataJSObjetcFilesImegesGalleryMosaicListing = {
 };
 
 
+/* HTML
+                            <div style="grid-column: span 1; grid-row: span 3;">
+                                <img src="https://picsum.photos/600/600/?image=512" />
+                                <a href="#ssFrontendFilesImagesGalleryMosaicLightbox01-1">
+                                    1
+                                </a>
+                            </div>
+                            
+                        <div id="ssFrontendFilesImagesGalleryMosaicLightbox01-1">
+                            <div class="content">
+                                <img src="https://picsum.photos/1920/1080/?image=512" />
+                                <div class="title">
+                                    No. 512 from Picsum
+                                    <a href="#" target="_blank" style="z-index: 9999;">
+                                        Comprar
+                                    </a>
+                                </div>
+                                <a class="close" href="#gallery"></a>
+                            </div>
+                        </div>
+
+*/
+
+const elementHTMLFilesGalleryMosaic = document.getElementById('divFilesImagesGalleryMosaic');
+let filesGalleryMosaicPopupHTML = '';
+
 // Logic.
 for (let i = 0; i < dataJSObjetcFilesImegesGalleryMosaicListing.files.length; i++) {
+  
+  // Append HTML.
+  elementHTMLFilesGalleryMosaic.innerHTML += `
+    <div style="grid-column: ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].grid_column}; grid-row: ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].grid_row};">
+        <img src="${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file_thumbnail}" />
+        <a href="#ssFrontendFilesImagesGalleryMosaicLightbox01-${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].id}">
+          ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].id}
+        </a>
+    </div>
+        
+    
+  `;
+  
+  // Insert HTML after element.
+  /**/
+  elementHTMLFilesGalleryMosaic.insertAdjacentHTML('afterend', `
+    <div id="ssFrontendFilesImagesGalleryMosaicLightbox01-${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].id}">
+        <div class="ss-frontend-files-images-gallery-mosaic01-popup">
+            <img src="${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file}" />
+            <div class="title">
+                ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].title}
+                <a href="${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].info_small1}" target="_blank" style="z-index: 9999;">
+                    Comprar
+                </a>
+            </div>
+            <a class="close" href="#gallery"></a>
+        </div>
+    </div>
+  `);
+  
   // Debug.
   console.log('dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file=', dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file);
 }
