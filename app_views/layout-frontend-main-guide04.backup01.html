@@ -83,163 +83,158 @@ https://magic.reactjs.net/htmltojsx.htm
     <body class="ss-frontend-body01">
         <a id="anchorTop"></a>
         <div class="ss-frontend-layout-container01">
-            <header class="ss-frontend-layout-header01">
+            <header class="ss-frontend-layout-header01" style="display:  none;">
                 <div>
                     <a href="#" 
                         title="Home" 
                         class="ss-frontend-layout-header-logo">
+
                     </a>
                     
-                    <img src="../app_files_layout/frontend-desktop-graphic1.png" alt="Piscina" class="ss-frontend-layout-header-graphic1" />
+                    <a href="tel:+xxx" 
+                        title="Phone"
+                        class="ss-frontend-link-contact01 ss-frontend-link-contact-layout">
+                        +1 xxx
+                    </a>
+                    
+                    <!--Social Media-->
+                    <address class="ss-frontend-social-media-layout">
+                        <a href="https://www.linkedin.com" 
+                            target="_blank" 
+                            title="LinkedIn"
+                            class="ss-frontend-social-media">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://youtu.be/" 
+                            target="_blank" 
+                            title="YouTube"
+                            class="ss-frontend-social-media">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="mailto:contact@domain.com" 
+                            target="_blank" 
+                            title="e-mail"
+                            class="ss-frontend-social-media">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://t.me/username?text=" 
+                            target="_blank"
+                            title="Contact Through Telegram" 
+                            class="ss-frontend-btn-telegram ss-frontend-element-center-absolute">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </address>
+                    
+                    <!--Shortcuts-->
+                    <aside class="ss-frontend-layout-shortcuts-layout">
+                      <a onclick="scrollToTarget('anchorSection');" 
+                          title="xxx" 
+                          class="ss-frontend-btn-generic-bg-color01"
+                          style="--btnGenericBGColor: #0000ff; --btnGenericBGColorHover: #78c3ae; --btnGenericColor: #78c3ae; --btnGenericColorHover: #0000ff;">
+                              xxx
+                      </a>
+                    </aside>
+                    
+                    
+                    <!--Menu mobile button.-->
+                    <a onclick="elementShowHideToggle('navMenu');" 
+                      title="Mobile Menu" 
+                      class="ss-frontend-mobile-layout-header-nav-menu d-lg-none">
+                          <i class="fa fa-bars"></i>
+                    </a>
+                    <!--Menu (responsive).-->
+                    <nav id="navMenu" class="ss-frontend-layout-header-nav d-none d-lg-block d-xl-block">
+                        <!--Mobile links.-->
+                        <a id="navLinkClose" 
+                          onclick="elementShowHideToggle('navMenu');" 
+                          title="Close Menu" 
+                          class="ss-frontend-mobile-links01 ss-frontend-mobile-links-layout01 d-lg-none">
+                            X Close
+                        </a>
+                        <a id="navLinkHome" 
+                            href="#" 
+                            title="Home" 
+                            class="ss-frontend-mobile-links01 ss-frontend-mobile-links-layout01">
+                            Home
+                        </a>
+                        <a id="navLink1" 
+                            href="#" 
+                            title="Link 1" 
+                            class="ss-frontend-mobile-links01 ss-frontend-mobile-links-layout01">
+                            Link 1
+                        </a>
+                    </nav>
+                    
+                    
                 </div>
             </header>
 			
             <!--1 column layout-->
             <main class="ss-frontend-layout-main01">
                 <div>
-                    <aside style="position: relative; display: block; overflow: hidden; min-height: 385px;">
-                        <!--Titles.-->
-                        <h1 class="ss-frontend-heading01 ss-frontend-heading01-layout">
-                            Main Titles
-                        </h1>
-                        
-                        no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no
-                        no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no
-                        no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no
-                        no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no
-                    </aside>
+                    <!--Titles.-->
+                    <h1 class="ss-frontend-heading01 ss-frontend-heading01-layout" style="display: none;">
+                        Main Titles
+                    </h1>
                     
                     <section class="ss-frontend-layout-section-content01">
-                        <div class="ss-frontend-files-images-gallery-mosaic01">
-                            <div style="grid-column: span 1; grid-row: span 3;">
-                                <img src="https://picsum.photos/600/600/?image=512" />
-                                <a href="#ssFrontendFilesImagesGalleryMosaicLightbox01-1">
-                                    1
-                                </a>
-                            </div>
-                            <div style="grid-column: span 3; grid-row: span 3;">
-                                <img src="https://picsum.photos/100/100/?image=513" />
-                                <a href="#ssFrontendFilesImagesGalleryMosaicLightbox01-2">
-                                    2
-                                </a>
-                            </div>
-                            <div style="grid-column: span 2; grid-row: span 2;">
-                                <img src="https://picsum.photos/600/600/?image=514" />
-                                <a href="#ssFrontendFilesImagesGalleryMosaicLightbox01-3">
-                                    3
-                                </a>
-                            </div>
-                            <div style="grid-column: span 2; grid-row: span 3;">
-                                <img src="https://picsum.photos/600/600/?image=515" />
-                                <a href="#ssFrontendFilesImagesGalleryMosaicLightbox01-4">
-                                    4
-                                </a>
-                            </div>
-                            <div style="grid-column: span 2; grid-row: span 2;">
-                                <img src="https://picsum.photos/600/600/?image=516" />
-                                <a href="#ssFrontendFilesImagesGalleryMosaicLightbox01-5">
-                                    5
-                                </a>
-                            </div>
-                            <div style="grid-column: span 2; grid-row: span 2;">
-                                <img src="https://picsum.photos/600/600/?image=517" />
-                                <a href="#ssFrontendFilesImagesGalleryMosaicLightbox01-6">
-                                    6
-                                </a>
-                            </div>
-                            <div style="grid-column: span 2; grid-row: span 2;">
-                                <img src="https://picsum.photos/600/600/?image=518" />
-                                <a href="#ssFrontendFilesImagesGalleryMosaicLightbox01-7">
-                                    7
-                                </a>
-                            </div>
+                        <script>
+                            window.console = window.console || function(t) {};
+                        </script>
+
+                          
+                          
+                        <script>
+                            if (document.location.search.match(/type=embed/gi)) {
+                              window.parent.postMessage("resize", "*");
+                            }
+                        </script>
+                      
+                        <div id="gallery">
+                          <div><img src="https://picsum.photos/600/600/?image=512"><a href="#lightbox-1">1</a></div>
+                          <div><img src="https://picsum.photos/600/600/?image=513"><a href="#lightbox-2">2</a></div>
+                          <div><img src="https://picsum.photos/600/600/?image=514"><a href="#lightbox-3">3</a></div>
+                          <div><img src="https://picsum.photos/600/600/?image=515"><a href="#lightbox-4">4</a></div>
+                          <div><img src="https://picsum.photos/600/600/?image=516"><a href="#lightbox-5">5</a></div>
+                          <div><img src="https://picsum.photos/600/600/?image=517"><a href="#lightbox-6">6</a></div>
+                          <div><img src="https://picsum.photos/600/600/?image=518"><a href="#lightbox-7">7</a></div>
                         </div>
                         
-                        <div id="ssFrontendFilesImagesGalleryMosaicLightbox01-1">
-                          <div class="content">
-                              <img src="https://picsum.photos/1920/1080/?image=512" />
-                              <div class="title">
-                                  No. 512 from Picsum
-                                  <a href="#" target="_blank" style="z-index: 9999;">
-                                      Comprar
-                                  </a>
-                              </div>
-                              <a class="close" href="#gallery"></a>
+                        <div class="lightbox" id="lightbox-1">
+                          <div class="content"><img src="https://picsum.photos/1920/1080/?image=512">
+                            <div class="title">No. <b>512</b> from Picsum<a href="#" style="z-index: 9999;">teste</a></div><a class="close" href="#gallery"></a>
                           </div>
                         </div>
-                        <div id="ssFrontendFilesImagesGalleryMosaicLightbox01-2">
-                          <div class="content">
-                              <img src="https://picsum.photos/1920/1080/?image=513" />
-                              <div class="title">
-                                  No. 513 from Picsum
-                                  <a href="#" target="_blank" style="z-index: 9999;">
-                                      Comprar
-                                  </a>
-                              </div>
-                              <a class="close" href="#gallery"></a>
+                        <div class="lightbox" id="lightbox-2">
+                          <div class="content"><img src="https://picsum.photos/1920/1080/?image=513">
+                            <div class="title">No. <b>513</b> from Picsum</div><a class="close" href="#gallery"></a>
                           </div>
                         </div>
-                        <div id="ssFrontendFilesImagesGalleryMosaicLightbox01-3">
-                          <div class="content">
-                              <img src="https://picsum.photos/1920/1080/?image=514" />
-                              <div class="title">
-                                  No. 514 from Picsum
-                                  <a href="#" target="_blank" style="z-index: 9999;">
-                                      Comprar
-                                  </a>
-                              </div>
-                              <a class="close" href="#gallery"></a>
+                        <div class="lightbox" id="lightbox-3">
+                          <div class="content"><img src="https://picsum.photos/1920/1080/?image=514">
+                            <div class="title">No. <b>514</b> from Picsum</div><a class="close" href="#gallery"></a>
                           </div>
                         </div>
-                        <div id="ssFrontendFilesImagesGalleryMosaicLightbox01-4">
-                          <div class="content">
-                              <img src="https://picsum.photos/1920/1080/?image=515" />
-                              <div class="title">
-                                  No. 515 from Picsum
-                                  <a href="#" target="_blank" style="z-index: 9999;">
-                                      Comprar
-                                  </a>
-                              </div>
-                              <a class="close" href="#gallery"></a>
+                        <div class="lightbox" id="lightbox-4">
+                          <div class="content"><img src="https://picsum.photos/1920/1080/?image=515">
+                            <div class="title">No. <b>515</b> from Picsum</div><a class="close" href="#gallery"></a>
                           </div>
                         </div>
-                        <div id="ssFrontendFilesImagesGalleryMosaicLightbox01-5">
-                          <div class="content">
-                              <img src="https://picsum.photos/1920/1080/?image=516" />
-                              <div class="title">
-                                  No. 516 from Picsum
-                                  <a href="#" target="_blank" style="z-index: 9999;">
-                                      Comprar
-                                  </a>
-                              </div>
-                              <a class="close" href="#gallery"></a>
+                        <div class="lightbox" id="lightbox-5">
+                          <div class="content"><img src="https://picsum.photos/1920/1080/?image=516">
+                            <div class="title">No. <b>516</b> from Picsum</div><a class="close" href="#gallery"></a>
                           </div>
                         </div>
-                        <div id="ssFrontendFilesImagesGalleryMosaicLightbox01-6">
-                          <div class="content">
-                              <img src="https://picsum.photos/1920/1080/?image=517" />
-                              <div class="title">
-                                  No. 517 from Picsum
-                                  <a href="#" target="_blank" style="z-index: 9999;">
-                                      Comprar
-                                  </a>
-                              </div>
-                              <a class="close" href="#gallery"></a>
+                        <div class="lightbox" id="lightbox-6">
+                          <div class="content"><img src="https://picsum.photos/1920/1080/?image=517">
+                            <div class="title">No. <b>517</b> from Picsum</div><a class="close" href="#gallery"></a>
                           </div>
                         </div>
-                        <div id="ssFrontendFilesImagesGalleryMosaicLightbox01-7">
-                          <div class="content">
-                              <img src="https://picsum.photos/1920/1080/?image=518" />
-                              <div class="title">
-                                  No. 518 from Picsum
-                                  <a href="#" target="_blank" style="z-index: 9999;">
-                                      Comprar
-                                  </a>
-                              </div>
-                              <a class="close" href="#gallery"></a>
+                        <div class="lightbox" id="lightbox-7">
+                          <div class="content"><img src="https://picsum.photos/1920/1080/?image=518">
+                            <div class="title">No. <b>518</b> from Picsum</div><a class="close" href="#gallery"></a>
                           </div>
                         </div>
-                        <script src="../app_js/data-files-imeges-gallery-mosaic-listing.js"></script>
                                             
                         <div id="lightgallery_demo" class="gallery-container" style="display:  none;">
                             <a 
@@ -485,20 +480,83 @@ https://magic.reactjs.net/htmltojsx.htm
                             */
                         </script>
                         
+                      
+                      
+                      
+                        no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no
+                        no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no
+                        no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no
+                        no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no
                     </section>
                 </div>
             </main>
 
             <!--Footer.-->
-            <footer class="ss-frontend-layout-footer01">
+            <footer class="ss-frontend-layout-footer01" style="display: none;">
                 <a onclick="scrollToTarget('anchorTop');"
                     title="Back to Top" 
                     class="ss-frontend-element-center-absolute ss-frontend-btn-top">
                 </a>
+                
+                <!--Site map.-->
+                <nav class="ss-frontend-layout-footer-nav-layout">
+                    <ul class="ss-frontend-links-ul02 d-none d-lg-block d-xl-block">
+                        <li class="ss-frontend-links-li02">
+                            <a href="#" 
+                                title="Home" 
+                                class="ss-frontend-footer-links01">
+                                Home
+                            </a>
+                        </li>
+                        <li class="ss-frontend-links-li02">
+                            <a href="#" 
+                                title="Link 1" 
+                                class="ss-frontend-footer-links01">
+                                Link 1
+                            </a>
+                        </li>
+                        <li class="ss-frontend-links-li02">
+                            <a href="#" 
+                                title="Link 2" 
+                                class="ss-frontend-footer-links01">
+                                Link 2
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <!--Social media.-->
+                <address class="ss-frontend-social-media-layout-footer">
+                    <a href="https://www.linkedin.com/" 
+                        target="_blank" 
+                        title="LinkedIn"
+                        class="ss-frontend-social-media-footer">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://youtu.be/" 
+                        target="_blank" 
+                        title="YouTube"
+                        class="ss-frontend-social-media-footer">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://t.me/username?text=" 
+                        target="_blank" 
+                        title="Telegram"
+                        class="ss-frontend-social-media-footer">
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+                    <a href="mailto:contact@domain.com" 
+                        target="_blank" 
+                        title="e-mail"
+                        class="ss-frontend-social-media-footer d-lg-none">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </address>
+                
                     
                 <!--Credits.-->
-                <small class="ss-frontend-copyright ss-frontend-credit-layout">
-                    Copyright © 2020 Leroy Merlin, todos os direitos reservados. Leroy Merlin Cia Brasileira de primavera-e-jardim-2021. Inscrição estadual nº 298.176.665.115 CNPJ/MF sob o nº 01.438.784/0048-60. Rua Domingas Galleteri Blotta, nº 315, Jardim Consórcio, CEP 04455-360, São Paulo - SP.
+                <small class="ss-frontend-credit ss-frontend-credit-layout">
+                    Credits
                 </small>
             </footer>
         </div>
