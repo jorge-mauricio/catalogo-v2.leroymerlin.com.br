@@ -4,23 +4,24 @@ const dataJSObjetcFiltersGenericListing = {
       id: 1,
       sort_order: 0,
       filter_index: 101,
-      title: 'Filter 01',
+      title: 'Limpeza',
       activation: 1,
     },
     {
       id: 2,
       sort_order: 0,
       filter_index: 101,
-      title: 'Filter 02',
+      title: 'Piscinas',
       activation: 1,
     },
     {
       id: 3,
       sort_order: 0,
       filter_index: 101,
-      title: 'Filter 03',
+      title: 'Acessórios',
       activation: 1,
     },
+    /*
     {
       id: 4,
       sort_order: 0,
@@ -42,6 +43,7 @@ const dataJSObjetcFiltersGenericListing = {
       title: 'Filter 06',
       activation: 1,
     },
+    */
   ]
   
 };

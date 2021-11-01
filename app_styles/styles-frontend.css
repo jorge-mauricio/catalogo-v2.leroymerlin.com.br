@@ -763,12 +763,12 @@ button:focus {
 
 .ss-frontend-btn-action-execute {
     color: #ffffff !important;
-    background-color: #009933; 
+    background-color: #72bf44; 
 
 }
 .ss-frontend-btn-action-execute:hover {
-    color: #ffffff !important;
-    background-color: #0000ff; 
+    color: #72bf44 !important;
+    background-color: #ffffff; 
     text-decoration: none;
 }
 
@@ -2866,7 +2866,7 @@ flex-wrap: wrap;
 .ss-frontend-files-images-gallery-mosaic01 {
     display: grid;
     height: calc(100vh - 10px);
-    grid-template: repeat(5, 1fr)/repeat(6, 1fr);
+    grid-template: repeat(6, 1fr)/repeat(6, 1fr);
     grid-gap: 0.5em;
 }
 @media (max-width: 800px) {
@@ -2937,7 +2937,7 @@ flex-wrap: wrap;
     transition: all ease 1s;
 }
 .ss-frontend-files-images-gallery-mosaic01 > div:hover img {
-    filter: blur(4px);
+    /*filter: blur(4px);*/
 }
 
 .ss-frontend-files-images-gallery-mosaic01 > div {
