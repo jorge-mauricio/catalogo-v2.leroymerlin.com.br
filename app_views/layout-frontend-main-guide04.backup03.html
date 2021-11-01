@@ -148,7 +148,7 @@ https://magic.reactjs.net/htmltojsx.htm
                                 overflow: hidden;
                             
                                 grid-column: span 3; 
-                                grid-row: span 3;
+                                grid-row: span 2;
                                 
                                 border-radius: 0px;
                             ">
@@ -160,54 +160,41 @@ https://magic.reactjs.net/htmltojsx.htm
                                     no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no
                                     no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no
                                     no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no
+                                    no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no
                                 </p>
-                                <nav id="divFiltersGeneric" class="ss-frontend-container-flex ss-frontend-layout-header-nav">
-                                  <button
-                                        onclick="
-                                            genericFilterByClassName('filersGeneric', '');
-                                        " 
-                                        class="ss-frontend-btn-base ss-frontend-btn-action ss-frontend-btn-action-layout"
-                                        style="min-width: 100%;"
-                                  >
-                                    Limpar Filtros
-                                  </button>
-                                </nav>
+                                <nav aria-colspan="divFiltersGeneric" class="ss-frontend-container-flex ss-frontend-layout-header-nav">
+                                    <button class="ss-frontend-btn-base ss-frontend-btn-action ss-frontend-btn-action-layout">
+                                      Filtro 1
+                                    </button>
+                                    
+                                    <button class="ss-frontend-btn-base ss-frontend-btn-action ss-frontend-btn-action-layout">
+                                      Filtro 1
+                                    </button>
+
+                                    <button class="ss-frontend-btn-base ss-frontend-btn-action ss-frontend-btn-action-layout">
+                                      Filtro 1
+                                    </button>
+
+                                    <button class="ss-frontend-btn-base ss-frontend-btn-action ss-frontend-btn-action-layout">
+                                      Filtro 1
+                                    </button>
+
+                                    <button class="ss-frontend-btn-base ss-frontend-btn-action ss-frontend-btn-action-layout">
+                                      Filtro 1
+                                    </button>
+
+                                    <button class="ss-frontend-btn-base ss-frontend-btn-action ss-frontend-btn-action-layout">
+                                      Filtro 1
+                                    </button>
+                                  </nav>
                             </aside>
                         </div>
                         
-                        <script>
-                          // Function to apply a style to HTML element.
-                          // **************************************************************************************
-                          function genericFilterByClassName(classNameDisplay, classNameHide){
-                            // Variables.
-                            // ----------------------
-                            let elementsHide;
-                            let elementsDisplay;
-                            // ----------------------
-                            
-                            // Logic.
-                            // ----------------------
-                            if (classNameHide !== '') {
-                              elementsHide = document.querySelectorAll("." + classNameHide);
-
-                              for (let i = 0; i < elementsHide.length; i++) {
-                                elementsHide[i].style.setProperty('display', 'none', 'important');
-                              }
-                            }
-                            
-                            if (elementsDisplay !== '') {
-                              elementsDisplay = document.querySelectorAll("." + classNameDisplay);
-
-                              for (let i = 0; i < elementsDisplay.length; i++) {
-                                elementsDisplay[i].style.setProperty('display', 'flex', 'important');
-                              }
-                            }
-                            // ----------------------
-                          }
-                          // **************************************************************************************
-                        </script>
-                        <script src="../app_js/data-filters-generic-listing.js"></script>
+                        
                         <script src="../app_js/data-files-images-listing-gallery-mosaic.js"></script>
+                        <script>
+                          
+                        </script>
                                             
                         <div id="lightgallery_demo" class="gallery-container" style="display:  none;">
                             <a 

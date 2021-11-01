@@ -140,6 +140,10 @@ input, textarea, select {
     box-sizing: border-box;
 }
 
+button:focus {
+    outline: none;
+}
+
 /* Apply styles for all alements */
 * {
     /*
@@ -231,8 +235,8 @@ input, textarea, select {
 }
 
 .ss-frontend-layout-header-nav {
-    position: absolute !important; 
-    bottom: 0px !important;
+    /*position: absolute !important; 
+    bottom: 0px !important;*/
 }
 
 .ss-frontend-layout-footer01 {
@@ -726,7 +730,7 @@ input, textarea, select {
     color: var(--ssFrontendDefaultColor) !important;
     background-color: #ececec; 
 }
-.ss-frontend-btn-action:hover {
+.ss-frontend-btn-action:hover, .ss-frontend-btn-action:focus, .ss-frontend-btn-action-a {
     color: #ffffff !important;
     background-color: var(--ssFrontendDefaultColor); 
     text-decoration: none;

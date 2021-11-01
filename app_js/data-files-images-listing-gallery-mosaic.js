@@ -18,7 +18,7 @@ const dataJSObjetcFilesImegesGalleryMosaicListing = {
       file: 'https://picsum.photos/1920/1080/?image=512',
       activation: 1,
       ids_files: [], // ids (caption) from related files
-      ids_filters: [], // Filters ids
+      ids_filters: ['1', '2'], // Filters ids
       grid_column: '1',
       grid_row: '3',
     },
@@ -182,166 +182,183 @@ for (let i = 0; i < dataJSObjetcFilesImegesGalleryMosaicListing.files.length; i+
   
   // Append HTML.
   elementHTMLFilesGalleryMosaic.innerHTML += `
-    <div 
-      class="
-      ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small1 === 2 ?
-        ` ss-frontend-files-images-gallery-mosaic-feature`
-        :
-        ``
-      }
-      "
-      style="
-        grid-column: span ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].grid_column}; 
-        grid-row: span ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].grid_row};
-        ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small1 === 3 ?
-          `
-          background-image: url(${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file});
-          background-repeat: no-repeat;
-          background-size: cover;
-          `
-          :
-          ``
-        }
-      ">
-        ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small1 !== 3 ?
-          `
-            <div class="
-            ss-frontend-files-images-gallery-mosaic-thumbnail-text
-            ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small3 === 1 ?
-              ` ss-frontend-files-images-gallery-mosaic-thumbnail-text1`
-              :
-              ``
-            }
-            ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small3 === 2 ?
-              ` ss-frontend-files-images-gallery-mosaic-thumbnail-text2`
-              :
-              ``
-            }
-            ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small3 === 3 ?
-              ` ss-frontend-files-images-gallery-mosaic-thumbnail-text3`
-              :
-              ``
-            }
-            ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small3 === 4 ?
-              ` ss-frontend-files-images-gallery-mosaic-thumbnail-text4`
-              :
-              ``
-            }
-            ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small3 === 5 ?
-              ` ss-frontend-files-images-gallery-mosaic-thumbnail-text5`
-              :
-              ``
-            }
-            ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small3 === 6 ?
-              ` ss-frontend-files-images-gallery-mosaic-thumbnail-text6`
-              :
-              ``
-            }
-            ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small3 === 7 ?
-              ` ss-frontend-files-images-gallery-mosaic-thumbnail-text7`
-              :
-              ``
-            }
-            ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small3 === 8 ?
-              ` ss-frontend-files-images-gallery-mosaic-thumbnail-text8`
-              :
-              ``
-            }
-          " style="
+    ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].activation === 1 ?
+      `
+        <div 
+          class="filersGeneric
           ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small1 === 2 ?
-            `color: #ffffff !important; `
+            ` ss-frontend-files-images-gallery-mosaic-feature`
             :
             ``
           }
+          ${
+            dataJSObjetcFilesImegesGalleryMosaicListing.files[i].ids_filters.map((value)=>{
+              return (` filersGeneric${value}`);
+            }).join(' ')
+          }
+          "
+          style="
+            grid-column: span ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].grid_column}; 
+            grid-row: span ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].grid_row};
+            ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small1 === 3 ?
+              `
+              background-image: url(${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file});
+              background-repeat: no-repeat;
+              background-size: cover;
+              `
+              :
+              ``
+            }
           ">
-                <h3>
-                    ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].title}
-                </h3>
-                <div>
-                    Código: ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].caption}
+            ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small1 !== 3 ?
+              `
+                <div class="
+                ss-frontend-files-images-gallery-mosaic-thumbnail-text
+                ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small3 === 1 ?
+                  ` ss-frontend-files-images-gallery-mosaic-thumbnail-text1`
+                  :
+                  ``
+                }
+                ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small3 === 2 ?
+                  ` ss-frontend-files-images-gallery-mosaic-thumbnail-text2`
+                  :
+                  ``
+                }
+                ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small3 === 3 ?
+                  ` ss-frontend-files-images-gallery-mosaic-thumbnail-text3`
+                  :
+                  ``
+                }
+                ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small3 === 4 ?
+                  ` ss-frontend-files-images-gallery-mosaic-thumbnail-text4`
+                  :
+                  ``
+                }
+                ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small3 === 5 ?
+                  ` ss-frontend-files-images-gallery-mosaic-thumbnail-text5`
+                  :
+                  ``
+                }
+                ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small3 === 6 ?
+                  ` ss-frontend-files-images-gallery-mosaic-thumbnail-text6`
+                  :
+                  ``
+                }
+                ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small3 === 7 ?
+                  ` ss-frontend-files-images-gallery-mosaic-thumbnail-text7`
+                  :
+                  ``
+                }
+                ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small3 === 8 ?
+                  ` ss-frontend-files-images-gallery-mosaic-thumbnail-text8`
+                  :
+                  ``
+                }
+              " style="
+              ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small1 === 2 ?
+                `color: #ffffff !important; `
+                :
+                ``
+              }
+              ">
+                    <h3>
+                        ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].title}
+                    </h3>
+                    <div>
+                        Código: ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].caption}
+                    </div>
+                    <p>
+                        ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].description}
+                    </p> 
                 </div>
-                <p>
-                    ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].description}
-                </p> 
-            </div>
-            
-            <img 
-              src="${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file_thumbnail}"
-              alt="${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].title}"
-              class="
-              ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small2 === 1 ?
-                ` ss-frontend-files-images-gallery-mosaic-thumbnail-image1`
-                :
-                ``
-              }
-              ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small2 === 2 ?
-                ` ss-frontend-files-images-gallery-mosaic-thumbnail-image2`
-                :
-                ``
-              }
-              ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small2 === 3 ?
-                ` ss-frontend-files-images-gallery-mosaic-thumbnail-image3`
-                :
-                ``
-              }
-              ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small2 === 4 ?
-                ` ss-frontend-files-images-gallery-mosaic-thumbnail-image4`
-                :
-                ``
-              }
-              ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small2 === 5 ?
-                ` ss-frontend-files-images-gallery-mosaic-thumbnail-image5`
-                :
-                ``
-              }
-              ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small2 === 6 ?
-                ` ss-frontend-files-images-gallery-mosaic-thumbnail-image6`
-                :
-                ``
-              }
-              ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small2 === 7 ?
-                ` ss-frontend-files-images-gallery-mosaic-thumbnail-image7`
-                :
-                ``
-              }
-              ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small2 === 8 ?
-                ` ss-frontend-files-images-gallery-mosaic-thumbnail-image8`
-                :
-                ``
-              }
-              " 
-            />
-          `:
-          ``
-        }
-        <a href="#ssFrontendFilesImagesGalleryMosaicLightbox01-${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].id}">
-          ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].id}
-        </a>
-    </div>
+                
+                <img 
+                  src="${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file_thumbnail}"
+                  alt="${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].title}"
+                  class="
+                  ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small2 === 1 ?
+                    ` ss-frontend-files-images-gallery-mosaic-thumbnail-image1`
+                    :
+                    ``
+                  }
+                  ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small2 === 2 ?
+                    ` ss-frontend-files-images-gallery-mosaic-thumbnail-image2`
+                    :
+                    ``
+                  }
+                  ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small2 === 3 ?
+                    ` ss-frontend-files-images-gallery-mosaic-thumbnail-image3`
+                    :
+                    ``
+                  }
+                  ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small2 === 4 ?
+                    ` ss-frontend-files-images-gallery-mosaic-thumbnail-image4`
+                    :
+                    ``
+                  }
+                  ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small2 === 5 ?
+                    ` ss-frontend-files-images-gallery-mosaic-thumbnail-image5`
+                    :
+                    ``
+                  }
+                  ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small2 === 6 ?
+                    ` ss-frontend-files-images-gallery-mosaic-thumbnail-image6`
+                    :
+                    ``
+                  }
+                  ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small2 === 7 ?
+                    ` ss-frontend-files-images-gallery-mosaic-thumbnail-image7`
+                    :
+                    ``
+                  }
+                  ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small2 === 8 ?
+                    ` ss-frontend-files-images-gallery-mosaic-thumbnail-image8`
+                    :
+                    ``
+                  }
+                  " 
+                />
+              `:
+              ``
+            }
+            <a href="#ssFrontendFilesImagesGalleryMosaicLightbox01-${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].id}">
+              ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].id}
+            </a>
+        </div>
+      `
+      :
+      ``
+    }
   `;
   
   // Insert HTML after element.
   elementHTMLFilesGalleryMosaic.insertAdjacentHTML('afterend', `
-    <div id="ssFrontendFilesImagesGalleryMosaicLightbox01-${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].id}">
-        <div class="ss-frontend-files-images-gallery-mosaic01-popup">
-            <img 
-              src="${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file}" 
-              alt="${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].title}" 
-            />
-            <div class="title">
-                ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].title}
-                <a href="${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].info_small1}" target="_blank" style="z-index: 9999;">
-                    Comprar
-                </a>
+    ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].activation === 1 ?
+      `
+        <div id="ssFrontendFilesImagesGalleryMosaicLightbox01-${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].id}">
+            <div class="ss-frontend-files-images-gallery-mosaic01-popup">
+                <img 
+                  src="${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file}" 
+                  alt="${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].title}" 
+                />
+                <div class="title">
+                    ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].title}
+                    <a href="${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].info_small1}" target="_blank" style="z-index: 9999;">
+                        Comprar
+                    </a>
+                </div>
+                <a class="close" href="#gallery"></a>
             </div>
-            <a class="close" href="#gallery"></a>
         </div>
-    </div>
+      `
+      :
+      ``
+    }
   `);
   
   // Debug.
-  console.log('dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file=', dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file);
+  // console.log('dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file=', dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file);
 }
 
 // Debug.
-console.log('dataJSObjetcFilesImegesGalleryMosaicListing=', dataJSObjetcFilesImegesGalleryMosaicListing);
+// console.log('dataJSObjetcFilesImegesGalleryMosaicListing=', dataJSObjetcFilesImegesGalleryMosaicListing);
