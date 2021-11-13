@@ -183,7 +183,8 @@ button:focus {
     display: block; 
 
     /*background-color: #ccc; */
-    min-height: 195px;
+    /*min-height: 195px;*/
+    min-height: 150px;
 
     /* 
     background-image: url(../app_files_layout/frontend-desktop-layout-head-bg1.png); 
@@ -214,11 +215,15 @@ button:focus {
     display: block; 
     /*left: 90px; 
     top: 48px;*/ 
-    width: 256px; 
-    height: 154px; 
+    /*width: 256px; 
+    height: 154px; */
+
+    width: 166px; 
+    height: 100px; 
 
     background-image: url(../app_files_layout/frontend-desktop-logo.png); 
     background-repeat: no-repeat;
+    background-size: contain;
 
     margin: 30px auto 0px auto;
 }
@@ -2865,8 +2870,10 @@ flex-wrap: wrap;
 
 .ss-frontend-files-images-gallery-mosaic01 {
     display: grid;
-    height: calc(100vh - 10px);
-    grid-template: repeat(6, 1fr)/repeat(6, 1fr);
+    /*height: calc(100vh - 10px);*/
+    height: 6000px;
+    /*grid-template: repeat(26, 1fr)/repeat(6, 1fr);*/
+    grid-template: repeat(42, 1fr)/repeat(6, 1fr);
     grid-gap: 0.5em;
 }
 @media (max-width: 800px) {
@@ -3165,6 +3172,8 @@ flex-wrap: wrap;
 
     max-width: 90%;
     color: #fff;
+
+    background-color: #ffffff;
 }
 [id^=ssFrontendFilesImagesGalleryMosaicLightbox01-] .ss-frontend-files-images-gallery-mosaic01-popup:hover > a.close {
     opacity: 1;

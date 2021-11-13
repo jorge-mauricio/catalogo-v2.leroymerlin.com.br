@@ -1,9 +1,10 @@
 (async () => {
   
-  if (!fetchDataFilesImagesImport.hasOwnProperty('dataSheetListing')) {
+  //if (fetchDataFilesImagesImport.hasOwnProperty('dataSheetListing') === false || fetchDataFilesImagesImport.hasOwnProperty('dataSheetListing') === undefined) {
+  if (typeof fetchDataFilesImagesImport !== 'object') {
     // Fetch data.
     /**/
-    fetchDataFilesImagesImport = await fetch('https://catalogo.leroymerlin.com.br/catalogo_interativo_v2/app_js/data-loader-xls.php', {
+    fetchDataFilesImagesImport = await fetch('https://catalogo.leroymerlin.com.br/catalogo_interativo_v2/app_js/data-loader-xls.php?fileName=data-files-images-listing-gallery-mosaic-v1.xls', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -30,7 +31,7 @@
     // dataFilesImagesImport.files.push(...objRow);
     dataFilesImagesImport.files.push(objRow);
     
-    // Breact arrays.
+    // Break arrays.
     if(objRow.ids_files && objRow.ids_files != 0){
       arrIdsFiles = objRow.ids_files.split(",");
     }
@@ -377,12 +378,12 @@
                       <h3>
                           ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].title}
                       </h3>
-                      <div>
-                          Código: ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].caption}
-                      </div>
                       <p>
                           ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].description}
                       </p> 
+                      <div>
+                          Código: ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].caption}
+                      </div>
                   </div>
                   
                   <img 
@@ -484,11 +485,7 @@
     // Debug.
     // console.log('dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file=', dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file);
   }  
-  
-  
 })();
-
-
 
 
 // Debug.

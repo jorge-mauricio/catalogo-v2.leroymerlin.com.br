@@ -1,50 +1,5 @@
 (async () => {
-  if (typeof fetchDataFiltersGenericImport !== 'object') {
-    // Fetch data.
-    /**/
-    fetchDataFiltersGenericImport = await fetch('https://catalogo.leroymerlin.com.br/catalogo_interativo_v2/app_js/data-loader-xls.php?fileName=data-filters-generic-listing-v1.xls', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    }).then((res) => {
-      return res.json();
-    });
-  }
-  
-  // Logic.
-  //fetchDataFiltersGenericImport.map()
-  
-  dataFiltersGenericImport.filters_generic = [];
-  let countRecords = 0;
-  
-  /* */
-  //dataFiltersGenericImport = fetchDataFiltersGenericImport.dataSheetListing.map((objRow) => {
-  fetchDataFiltersGenericImport.dataSheetListing.map((objRow) => {
-    // Variables.
-    let arrIdsFiles = [];
-    let arrIdsFilters = [];
-    
-    // Add objects to new collection.
-    // dataFiltersGenericImport.files.push(...objRow);
-    dataFiltersGenericImport.filters_generic.push(objRow);
-    
-    // Data redefinition.
-    dataFiltersGenericImport.filters_generic[countRecords].id = parseInt(objRow.id);
-    dataFiltersGenericImport.filters_generic[countRecords].sort_order = parseInt(objRow.sort_order);
-    dataFiltersGenericImport.filters_generic[countRecords].activation = parseInt(objRow.activation);
-    
-    countRecords++;
-    
-    // Debug.
-    // console.log('objRow=', objRow);
-    // console.log('countRecords=', countRecords);
-  });
 
-  // const dataJSObjetcFilesImegesGalleryMosaicListing = dataFilesImagesImport;
-  const dataJSObjetcFiltersGenericListing = Object.assign({}, dataFiltersGenericImport);
-  console.log('dataJSObjetcFiltersGenericListing=', dataJSObjetcFiltersGenericListing);
-  /*
   const dataJSObjetcFiltersGenericListing = {
     filters_generic: [
       {
@@ -68,10 +23,33 @@
         title: 'Acessórios',
         activation: 1,
       },
+      /*
+      {
+        id: 4,
+        sort_order: 0,
+        filter_index: 101,
+        title: 'Filter 04',
+        activation: 1,
+      },
+      {
+        id: 5,
+        sort_order: 0,
+        filter_index: 101,
+        title: 'Filter 05',
+        activation: 1,
+      },
+      {
+        id: 6,
+        sort_order: 0,
+        filter_index: 101, // 1 - image | 2 - video
+        title: 'Filter 06',
+        activation: 1,
+      },
+      */
     ]
+    
   };
-  */
- 
+
   const elementHTMLFiltersGeneric = document.getElementById('divFiltersGeneric');
 
   // Logic.

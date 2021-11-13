@@ -1,16 +1,21 @@
 <?php
 header('Content-type: application/json');
-//header('Content-Type: text/html; charset=utf-8');
+// header('Content-Type: text/html; charset=utf-8');
 
-//Error handling / displaying.
+// Error handling / displaying.
 //----------------------
 ini_set('display_errors', 1); //Show all errors.
-//error_reporting(0); //Ocultar todos erros.
-//error_reporting(E_ALL); //alpshost
-//error_reporting(E_STRICT & ~E_STRICT); //Locaweb Linux 5.4 | HostGator Linux 5.5 | e 1 (windows)
-//error_reporting(E_ALL | E_STRICT);
-//error_reporting(error_reporting() & ~E_NOTICE);
+// error_reporting(0); //Ocultar todos erros.
+// error_reporting(E_ALL); //alpshost
+// error_reporting(E_STRICT & ~E_STRICT); //Locaweb Linux 5.4 | HostGator Linux 5.5 | e 1 (windows)
+// error_reporting(E_ALL | E_STRICT);
+// error_reporting(error_reporting() & ~E_NOTICE);
 //----------------------
+
+
+// Variables.
+//----------------------
+
 
 
 //Funções para converter dados em arrays para UTF8.
@@ -35,21 +40,27 @@ include '../php_modules/vendor/php-excel-reader/excel_reader.php'; // include th
 
 
 // Variables.
+//----------------------
+$fileName = $_GET['fileName'];
+
 $perData = new PhpExcelReader; // creates object instance of the class
 $dataSheetTarget = array();
 $dataSheetTargetListing = array();
 $dataSheetTargetListingFormattedJson = '';
+//----------------------
 
 // Value definition.
-$perData->read('data-files-images-listing-gallery-mosaic-v1.xls'); // reads and stores the excel file data
+//----------------------
+// $perData->read('data-files-images-listing-gallery-mosaic-v1.xls'); // reads and stores the excel file data
+$perData->read($fileName); // reads and stores the excel file data
 
 $dataSheetTarget = $perData->sheets[0];
 $dataSheetTargetListing = $dataSheetTarget['cells'];
 $dataSheetTargetListingFormatted = array();
-
+//----------------------
 
 // Logic:
-
+//----------------------
 // Rename indexes to columns names.
 /**/
 for ($i = 0; $i <= count($dataSheetTargetListing); $i++) {
@@ -107,10 +118,10 @@ $dataSheetTargetListingFormatted = ArrayConveterUTF8($dataSheetTargetListingForm
 // Delete first array (columns names)
 // $dataSheetTargetListingFormatted = array_shift($dataSheetTargetListingFormatted);
 
-
 // Convert to json.
 $dataSheetTargetListingFormatted = array_values($dataSheetTargetListingFormatted);
 $dataSheetTargetListingFormattedJson = json_encode($dataSheetTargetListingFormatted);
+//----------------------
 
 // Output.
 echo '{"dataSheetListing": ' . $dataSheetTargetListingFormattedJson . '}';
