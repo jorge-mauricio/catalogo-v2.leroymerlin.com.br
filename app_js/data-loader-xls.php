@@ -1,4 +1,5 @@
 <?php
+header('Content-type: application/json');
 //header('Content-Type: text/html; charset=utf-8');
 
 //Error handling / displaying.
@@ -37,6 +38,7 @@ include '../php_modules/vendor/php-excel-reader/excel_reader.php'; // include th
 $perData = new PhpExcelReader; // creates object instance of the class
 $dataSheetTarget = array();
 $dataSheetTargetListing = array();
+$dataSheetTargetListingFormattedJson = '';
 
 // Value definition.
 $perData->read('data-files-images-listing-gallery-mosaic-v1.xls'); // reads and stores the excel file data
@@ -53,6 +55,7 @@ $dataSheetTargetListingFormatted = array();
 for ($i = 0; $i <= count($dataSheetTargetListing); $i++) {
     if ($dataSheetTargetListing[$i] !== NULL) {
         $dataSheetTargetListingFormatted[$i] = array();
+        
         for ($countColumns = 1; $countColumns <= count($dataSheetTargetListing[$i]); $countColumns++) {
             
             // $dataSheetTargetListingFormatted[$i] = array($dataSheetTargetListing[1][$countColumns] => $dataSheetTargetListing[$i]);
@@ -63,17 +66,35 @@ for ($i = 0; $i <= count($dataSheetTargetListing); $i++) {
             
             
             // Debug.
-            //echo '$dataSheetTargetListing[i]=<pre>';
-            //var_dump($dataSheetTargetListing[$i]);
+            //echo 'array=<pre>';
+            //var_dump(array($dataSheetTargetListing[1][$countColumns] => $dataSheetTargetListing[$i][$countColumns]));
+            //echo '</pre><br />';
+            
+            //echo 'countColumns=<pre>';
+            //var_dump($countColumns);
             //echo '</pre><br />';
         }
         
         // Debug.
-        //echo '$dataSheetTargetListing[i]=<pre>';
+        //echo 'count=<pre>';
+        //var_dump(count($dataSheetTargetListing[$i]));
+        //echo '</pre><br />';
+        
+        //echo 'dataSheetTargetListing[i]=<pre>';
         //var_dump($dataSheetTargetListing[$i]);
         //echo '</pre><br />';
     }
 }
+/*
+foreach ($dataSheetTargetListing as $arrdataSheetTargetListingRow) {
+    $countColumns = 0;
+    array_push($dataSheetTargetListingFormatted, array_walk($arrdataSheetTargetListingRow, function($key, $value) {
+        
+        return $arrdataSheetTargetListingRow[$countColumns] => $value;
+        
+    }))
+}
+*/
 
 
 // Reset keys.
@@ -87,29 +108,24 @@ $dataSheetTargetListingFormatted = ArrayConveterUTF8($dataSheetTargetListingForm
 // $dataSheetTargetListingFormatted = array_shift($dataSheetTargetListingFormatted);
 
 
-/*
-foreach ($dataSheetTargetListing as $arrdataSheetTargetListingRow) {
-    $countColumns = 0;
-    array_push($dataSheetTargetListingFormatted, array_walk($arrdataSheetTargetListingRow, function($key, $value) {
-        
-        return $arrdataSheetTargetListingRow[$countColumns] => $value;
-        
-    }))
-}
-*/
+// Convert to json.
+$dataSheetTargetListingFormatted = array_values($dataSheetTargetListingFormatted);
+$dataSheetTargetListingFormattedJson = json_encode($dataSheetTargetListingFormatted);
 
+// Output.
+echo '{"dataSheetListing": ' . $dataSheetTargetListingFormattedJson . '}';
 
 
 // Debug.
-echo 'dataSheetTargetListingFormatted=<pre>';
-var_dump($dataSheetTargetListingFormatted);
-echo '</pre><br />';
+//echo 'dataSheetTargetListingFormatted=<pre>';
+//var_dump($dataSheetTargetListingFormatted);
+//echo '</pre><br />';
 
 //echo 'dataSheetTargetListingFormatted=<pre>';
 //var_dump(ArrayConveterUTF8($dataSheetTargetListingFormatted));
 //echo '</pre><br />';
 
-//echo 'dataSheetTargetListing=<pre>';
+//cho 'dataSheetTargetListing=<pre>';
 //var_dump(ArrayConveterUTF8($dataSheetTargetListing));
 //echo '</pre><br />';
 
@@ -120,7 +136,7 @@ echo '</pre><br />';
 
 // Test to see the excel data stored in $sheets property
 //echo 'excel->sheets = <pre>';
-// var_export($perData->sheets);
+//var_export($perData->sheets);
 //var_dump($perData->sheets);
 
 //$utfEncodedArray = array_map('utf8_encode', $perData->sheets);
