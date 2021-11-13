@@ -1,4 +1,5 @@
 <?php
+// 
 header('Content-type: application/json');
 // header('Content-Type: text/html; charset=utf-8');
 
@@ -52,7 +53,8 @@ $dataSheetTargetListingFormattedJson = '';
 // Value definition.
 //----------------------
 // $perData->read('data-files-images-listing-gallery-mosaic-v1.xls'); // reads and stores the excel file data
-$perData->read($fileName); // reads and stores the excel file data
+// $perData->read($fileName); // reads and stores the excel file data
+$perData->read('../app_files_public/' . $fileName); // reads and stores the excel file data
 
 $dataSheetTarget = $perData->sheets[0];
 $dataSheetTargetListing = $dataSheetTarget['cells'];

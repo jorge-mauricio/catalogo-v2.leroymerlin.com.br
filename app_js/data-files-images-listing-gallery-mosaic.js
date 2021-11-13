@@ -4,7 +4,8 @@
   if (typeof fetchDataFilesImagesImport !== 'object') {
     // Fetch data.
     /**/
-    fetchDataFilesImagesImport = await fetch('https://catalogo.leroymerlin.com.br/catalogo_interativo_v2/app_js/data-loader-xls.php?fileName=data-files-images-listing-gallery-mosaic-v1.xls', {
+    // fetchDataFilesImagesImport = await fetch('https://catalogo.leroymerlin.com.br/catalogo_interativo_v2/app_js/data-loader-xls.php?fileName=data-files-images-listing-gallery-mosaic-v1.xls', {
+    fetchDataFilesImagesImport = await fetch('https://catalogo.leroymerlin.com.br/catalogo_interativo_v2/backend_php/data-loader-xls.php?fileName=data-files-images-listing-gallery-mosaic-v1.xls', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

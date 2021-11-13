@@ -2,7 +2,8 @@
   if (typeof fetchDataFiltersGenericImport !== 'object') {
     // Fetch data.
     /**/
-    fetchDataFiltersGenericImport = await fetch('https://catalogo.leroymerlin.com.br/catalogo_interativo_v2/app_js/data-loader-xls.php?fileName=data-filters-generic-listing-v1.xls', {
+    // fetchDataFiltersGenericImport = await fetch('https://catalogo.leroymerlin.com.br/catalogo_interativo_v2/app_js/data-loader-xls.php?fileName=data-filters-generic-listing-v1.xls', {
+    fetchDataFiltersGenericImport = await fetch('https://catalogo.leroymerlin.com.br/catalogo_interativo_v2/backend_php/data-loader-xls.php?fileName=data-filters-generic-listing-v1.xls', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
