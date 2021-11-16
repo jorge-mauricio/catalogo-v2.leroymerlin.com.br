@@ -299,6 +299,7 @@
       ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].activation === 1 ?
         `
           <div 
+            id="divFile${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].id}"
             class="filersGeneric
             ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small1 === 2 ?
               ` ss-frontend-files-images-gallery-mosaic-feature`
