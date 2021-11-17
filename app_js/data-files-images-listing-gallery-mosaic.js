@@ -299,7 +299,7 @@
       ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].activation === 1 ?
         `
           <div 
-            id="divFile${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].id}"
+            id="divFile${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].caption}"
             class="filersGeneric
             ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small1 === 2 ?
               ` ss-frontend-files-images-gallery-mosaic-feature`
@@ -446,8 +446,15 @@
                 `:
                 ``
               }
-              <a href="#ssFrontendFilesImagesGalleryMosaicLightbox01-${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].id}">
-                ${/*dataJSObjetcFilesImegesGalleryMosaicListing.files[i].id*/ ''}
+              <a
+              ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small1 === 3 ? `
+                onclick="FunctionsSyncSystem.htmlGenericStyle01('divPopupFilesBind', 'display', 'block');
+                        FunctionsSyncSystem.dataHTMLCopy('divFile91053291', 'divPopupFilesContent');"
+              `:`
+                href="#ssFrontendFilesImagesGalleryMosaicLightbox01-${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].id}"
+              `}
+              >
+                
               </a>
           </div>
         `

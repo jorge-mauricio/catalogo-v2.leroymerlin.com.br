@@ -3034,6 +3034,8 @@ flex-wrap: wrap;
     padding: 2rem;
     mix-blend-mode: difference;
     transition: all ease 1s;
+
+    cursor: pointer;
 }
 .ss-frontend-files-images-gallery-mosaic01 > div:hover a {
     opacity: 1;
@@ -4553,6 +4555,78 @@ flex-wrap: wrap;
 
     overflow: hidden;
 }
+
+
+
+.ss-frontend-dashboard-popup-container {
+    position: fixed; 
+    display: block; 
+
+    top: 50%; 
+    left: 50%; 
+
+    margin-top: 0px; /* related to height (ss-frontend-dashboard-popup) */  
+    margin-left: -200px; /* related to width (ss-frontend-dashboard-popup) */
+}
+.ss-frontend-dashboard-popup {
+    position: absolute;
+
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+    width: 400px;
+    height: 500px;
+
+    background-color: #ffffff;
+    border: 1px solid #969696;
+
+    /* line-height: 100px; */ 
+    /* padding: 50px 0px 50px 0px; */
+    /* padding-top: 250px; */
+    
+    /* vertical-align: middle; */
+    /* text-align: center; */
+    /* display: inline; */
+    /* display: table-cell; */
+    
+    margin: auto;
+
+    /* Drop Shadow */
+    -moz-box-shadow: 3px 3px 4px #969696;
+    -webkit-box-shadow: 3px 3px 4px #969696;
+    box-shadow: 3px 3px 4px #969696;
+}
+.ss-frontend-dashboard-popup > div:nth-of-type(1) {
+    position: absolute; 
+    display: block; 
+
+    top: -40px; 
+    right: 0px;
+
+    height: 25px; 
+}
+.ss-frontend-dashboard-popup > div:nth-of-type(1) {
+    position: absolute; 
+    display: block; 
+
+    top: -40px; 
+    right: 0px;
+
+    height: 25px; 
+}/* Div - Close Button */
+.ss-frontend-dashboard-popup > div:nth-of-type(2) {
+    position: relative; 
+    display: block; 
+
+    /*top: -40px; 
+    right: 0px;*/
+
+    height: 100%; 
+
+    overflow: auto;
+}/* Div - Content */
 /* ************************************************************************************** */
 
 

@@ -194,6 +194,23 @@ https://magic.reactjs.net/htmltojsx.htm
                             </aside>
                         </div>
                         
+                        <!--Pop-up.-->
+                        <div id="divPopupFilesBind" class="ss-frontend-dashboard-popup-container" style="display: none;">
+                            <div class="ss-frontend-dashboard-popup">
+                                <div>
+                                    <a id="linkPopupFilesBind" 
+                                      onclick="FunctionsSyncSystem.elementMessage01('divPopupFilesContent', '');
+                                              FunctionsSyncSystem.htmlGenericStyle01('divPopupFilesBind', 'display', 'none');" 
+                                      class="ss-frontend-btn-base ss-frontend-btn-action-cancel" style="min-width: 40px;">
+                                        X
+                                    </a>
+                                </div>
+                                <div id="divPopupFilesContent">
+                                  
+                                </div>
+                            </div>
+                        </div>
+                        
                         <script>
                           // Function to apply a style to HTML element.
                           // **************************************************************************************
@@ -224,6 +241,41 @@ https://magic.reactjs.net/htmltojsx.htm
                             // ----------------------
                           }
                           // **************************************************************************************
+                          
+                          
+// Copy HTML from one element to another.
+// **************************************************************************************
+/**
+ * Copy HTML from one element to another.
+ * @param {string} idElementOrigin
+ * @param {string} idElementTarget
+ * @example
+ * dataHTMLCopy('divContentDesktop', 'divContentMobile');
+ */
+const dataHTMLAdd = (idElementOrigin: string, idElementTarget: string): void => {
+  // Variables.
+  // ----------------------
+  const elementOrigin = document.getElementById(idElementOrigin);
+  const elementTarget = document.getElementById(idElementTarget);
+  // ----------------------
+
+  // Logic.
+  if (elementOrigin) {
+    if (elementTarget) {
+      elementTarget.innerHTML = ''; // clear target data
+      elementTarget.innerHTML = elementOrigin.innerHTML;
+    }
+  }
+
+  // Usage.
+  /*
+  $(document).ready(function (){
+      dataHTMLCopy('divContentDesktop', 'divContentMobile');
+  });
+  */
+};
+// **************************************************************************************
+                          
                         </script>
                         <script src="../app_js/data-filters-generic-import.js?v=10"></script>
                         <script src="../app_js/data-filters-generic-listing.js?v=10"></script>

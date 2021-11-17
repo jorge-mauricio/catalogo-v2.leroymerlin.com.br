@@ -99,7 +99,7 @@ fetchDataFilesImagesImport = {
           "file_thumbnail_width": "50",
           "file": "g_90311816.png",
           "activation": "1",
-          "ids_files": "0",
+          "ids_files": "90311760, 91053291",
           "ids_filters": "1",
           "grid_column": "4",
           "grid_row": "1"
