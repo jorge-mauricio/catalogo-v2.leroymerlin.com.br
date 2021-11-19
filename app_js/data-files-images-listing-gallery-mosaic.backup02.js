@@ -296,7 +296,7 @@
     
     // Append HTML.
     elementHTMLFilesGalleryMosaic.innerHTML += `
-      ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].activation === 1 || dataJSObjetcFilesImegesGalleryMosaicListing.files[i].activation === 2 ?
+      ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].activation === 1 ?
         `
           <div 
             id="divFile${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].caption}"
@@ -311,7 +311,7 @@
                 return (` filersGeneric${value}`);
               }).join(' ')
             }
-          "
+            "
             style="
               grid-column: span ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].grid_column}; 
               grid-row: span ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].grid_row};
@@ -321,13 +321,6 @@
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center center;
-                `
-                :
-                ``
-              }
-              ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].activation === 2 ?
-                `
-                display: none;
                 `
                 :
                 ``

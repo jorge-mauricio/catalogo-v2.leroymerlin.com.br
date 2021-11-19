@@ -401,21 +401,43 @@ FunctionsSyncSystem.elementMessage01 = elementMessage01;
  * Copy HTML from one element to another.
  * @param {string} idElementOrigin
  * @param {string} idElementTarget
+ * @param {string} idElementOriginMethod '' - copy inner | outter
+ * @param {string} idElementTargetMethod '' - clear target | add
  * @example
- * dataHTMLCopy('divContentDesktop', 'divContentMobile');
+ * FunctionsSyncSystem.dataHTMLCopy('divContentDesktop', 'divContentMobile');
+ * FunctionsSyncSystem.dataHTMLCopy('divContentDesktop', 'divContentMobile', 'outter', 'add');
  */
-const dataHTMLCopy = (idElementOrigin: string, idElementTarget: string): void => {
+const dataHTMLCopy = (idElementOrigin: string, idElementTarget: string, idElementOriginMethod: string = '', idElementTargetMethod: string = ''): void => {
   // Variables.
   // ----------------------
-  const elementOrigin = document.getElementById(idElementOrigin);
+  const elementOrigin: HTMLElement = document.getElementById(idElementOrigin);
   const elementTarget = document.getElementById(idElementTarget);
   // ----------------------
 
   // Logic.
   if (elementOrigin) {
     if (elementTarget) {
-      elementTarget.innerHTML = ''; // clear target data
-      elementTarget.innerHTML = elementOrigin.innerHTML;
+      // Substitute elements.
+      if (idElementTargetMethod === '') {
+        elementTarget.innerHTML = ''; // clear target data
+        
+        if (idElementOriginMethod === '') {
+          elementTarget.innerHTML = elementOrigin.innerHTML;
+        }
+        if (idElementOriginMethod === 'outter') {
+          elementTarget.innerHTML = elementOrigin.outerHTML;
+        }
+      }
+
+      // Add elements.
+      if (idElementTargetMethod === 'add') {
+        if (idElementOriginMethod === '') {
+          elementTarget.innerHTML += elementOrigin.innerHTML;
+        }
+        if (idElementOriginMethod === 'outter') {
+          elementTarget.innerHTML += elementOrigin.outerHTML;
+        }
+      }
     }
   }
 
@@ -428,6 +450,35 @@ const dataHTMLCopy = (idElementOrigin: string, idElementTarget: string): void =>
 };
 // **************************************************************************************
 FunctionsSyncSystem.dataHTMLCopy = dataHTMLCopy;
+
+// Remove HTML.
+// **************************************************************************************
+/**
+ * Remove HTML.
+ * @param {string} idElement
+ * @example
+ * FunctionsSyncSystem.dataHTMLDelete('123');
+ */
+ const dataHTMLDelete = (idElement: string): void => {
+  // Variables.
+  // ----------------------
+  const element = document.getElementById(idElement);
+  // ----------------------
+
+  // Logic.
+  // ----------------------
+  if (idElement) {
+    element.outerHTML = '';
+  }
+  // ----------------------
+
+  // Usage.
+  /*
+  FunctionsSyncSystem.dataHTMLDelete('123');
+  */
+};
+// **************************************************************************************
+FunctionsSyncSystem.dataHTMLDelete = dataHTMLDelete;
 
 // Functions to add / remove css classes.
 // **************************************************************************************
