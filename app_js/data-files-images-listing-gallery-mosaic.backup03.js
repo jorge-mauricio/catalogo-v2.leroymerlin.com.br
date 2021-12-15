@@ -455,8 +455,7 @@
               }
               <a
               ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small1 === 3 ? `
-                onclick="FunctionsSyncSystem.elementMessage01('divPopupFilesContent', '');
-                FunctionsSyncSystem.htmlGenericStyle01('divPopupFilesBind', 'display', 'block');
+                onclick="FunctionsSyncSystem.htmlGenericStyle01('divPopupFilesBind', 'display', 'block');
                 ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].ids_files.map((caption)=>{
                   return (`
                   FunctionsSyncSystem.dataHTMLCopy('divFile${caption.trim()}', 'divPopupFilesContent', 'outter', 'add');
@@ -478,7 +477,7 @@
     
     // Insert HTML after element.
     elementHTMLFilesGalleryMosaic.insertAdjacentHTML('afterend', `
-      ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].activation === 1 || dataJSObjetcFilesImegesGalleryMosaicListing.files[i].activation === 2 ?
+      ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].activation === 1 ?
         `
           <div id="ssFrontendFilesImagesGalleryMosaicLightbox01-${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].id}" style="z-index: 9999;">
               <div class="ss-frontend-files-images-gallery-mosaic01-popup">
