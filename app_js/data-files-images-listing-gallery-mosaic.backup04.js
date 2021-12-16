@@ -311,11 +311,6 @@
                 return (` filersGeneric${value}`);
               }).join(' ')
             }
-            ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].activation === 2 ?
-              ` ss-frontend-files-images-gallery-popup`
-              :
-              ``
-            }
           "
             style="
               grid-column: span ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].grid_column}; 
@@ -485,25 +480,18 @@
     elementHTMLFilesGalleryMosaic.insertAdjacentHTML('afterend', `
       ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].activation === 1 || dataJSObjetcFilesImegesGalleryMosaicListing.files[i].activation === 2 ?
         `
-          <div onclick="location.href='#gallery';" id="ssFrontendFilesImagesGalleryMosaicLightbox01-${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].id}" style="z-index: 9999; cursor: pointer;">
-              <div class="ss-frontend-files-images-gallery-mosaic01-popup" style="cursor: default;">
+          <div id="ssFrontendFilesImagesGalleryMosaicLightbox01-${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].id}" style="z-index: 9999;">
+              <div class="ss-frontend-files-images-gallery-mosaic01-popup">
                   <img 
                     src="${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file}" 
                     alt="${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].title}" 
                   />
                   <div class="title">
-                      <div style="float: left; margin-right: 200px;">
-                        <div>
-                          ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].title} - ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].caption}
-                        </div>
-                        <div>
-                          ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].description}
-                        </div>
-                      </div>
+                      ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].title}
                       <a href="${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].info_small1}" 
-                        target="_blank" 
-                        class="ss-frontend-btn-base ss-frontend-btn-action-execute"
-                        style="z-index: 9999; float: right;">
+                      target="_blank" 
+                      class="ss-frontend-btn-base ss-frontend-btn-action-execute"
+                      style="z-index: 9999; float: right;">
                           Detalhes
                       </a>
                   </div>

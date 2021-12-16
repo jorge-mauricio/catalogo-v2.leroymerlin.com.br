@@ -142,7 +142,7 @@ https://magic.reactjs.net/htmltojsx.htm
     <body class="ss-frontend-body01">
         <a id="anchorTop"></a>
         <div class="ss-frontend-layout-container01">
-            <header id="layoutHeader" class="ss-frontend-layout-header01">
+            <header class="ss-frontend-layout-header01">
                 <div>
                     <!--Social Media-->
                     <address class="ss-frontend-social-media-layout">
@@ -188,7 +188,7 @@ https://magic.reactjs.net/htmltojsx.htm
             </header>
 			
             <!--1 column layout-->
-            <main id="layoutMain" class="ss-frontend-layout-main01">
+            <main class="ss-frontend-layout-main01">
                 <div>
                     <section class="ss-frontend-layout-section-content01">
                         <div id="divFilesImagesGalleryMosaic" class="ss-frontend-files-images-gallery-mosaic01">
@@ -222,7 +222,6 @@ https://magic.reactjs.net/htmltojsx.htm
                                   <button
                                         onclick="
                                             genericFilterByClassName('filersGeneric', '');
-                                            genericFilterByClassName('', 'ss-frontend-files-images-gallery-popup');
                                         " 
                                         class="ss-frontend-btn-base ss-frontend-btn-action ss-frontend-btn-action-layout"
                                         style="min-width: 100%;"
@@ -253,15 +252,8 @@ https://magic.reactjs.net/htmltojsx.htm
                         </div>
                         
                         <script>
-                          // Function to apply a style to HTML element based on class name.
+                          // Function to apply a style to HTML element.
                           // **************************************************************************************
-                        /**
-                         * Function to apply a style to HTML element based on class name.
-                         * @param {string} classNameDisplay
-                         * @param {string} classNameHide
-                         * @example
-                         * htmlGenericStyle01('divTest1', 'display', 'none');
-                         */
                           function genericFilterByClassName(classNameDisplay, classNameHide){
                             // Variables.
                             // ----------------------
@@ -279,7 +271,7 @@ https://magic.reactjs.net/htmltojsx.htm
                               }
                             }
                             
-                            if (classNameDisplay !== '') {
+                            if (elementsDisplay !== '') {
                               elementsDisplay = document.querySelectorAll("." + classNameDisplay);
 
                               for (let i = 0; i < elementsDisplay.length; i++) {
@@ -291,33 +283,8 @@ https://magic.reactjs.net/htmltojsx.htm
                           // **************************************************************************************
                           
                           
-                          function elementShowByPosition(idElement, positionType, positionValue) {
-                              // positionType: top | bottom
-
-                              // Variables.
-                              let targetElement = document.getElementById(idElement);
-
-
-                              // Logic.
-                              if (targetElement) {
-                                // Top.
-                                if (positionType === 'top') {
-                                    if (document.documentElement.scrollTop > positionValue) {
-                                        //FunctionsSyncSystem.htmlGenericStyle01(idElement, 'visibility', 'visible');
-                                        targetElement.style.setProperty('visibility', 'visible', 'important');
-                                    } else {
-                                        //FunctionsSyncSystem.htmlGenericStyle01(idElement, 'visibility', 'hidden');
-                                        targetElement.style.setProperty('visibility', 'hidden', 'important');
-                                    }
-
-
-                                    // Debug.
-                                    // console.log('document.documentElement.scrollTop=', document.documentElement.scrollTop);
-                                    // console.log('document.scrollHeight=', document.scrollHeight);
-                                    // console.log('document.clientHeight=', document.clientHeight);
-                                }
-                              }
-                          }
+                          
+                          
                           
                         </script>
                         <script src="../app_js/data-filters-generic-import.js?v=10"></script>
@@ -330,7 +297,7 @@ https://magic.reactjs.net/htmltojsx.htm
 
             <!--Footer.-->
             <footer class="ss-frontend-layout-footer01">
-                <a onclick="FunctionsSyncSystem.scrollToTarget('anchorTop');"
+                <a onclick="scrollToTarget('anchorTop');"
                     title="Back to Top" 
                     class="ss-frontend-element-center-absolute ss-frontend-btn-top">
                 </a>
@@ -340,40 +307,6 @@ https://magic.reactjs.net/htmltojsx.htm
                     Copyright © 2020 Leroy Merlin, todos os direitos reservados. Leroy Merlin Cia Brasileira de primavera-e-jardim-2021. Inscrição estadual nº 298.176.665.115 CNPJ/MF sob o nº 01.438.784/0048-60. Rua Domingas Galleteri Blotta, nº 315, Jardim Consórcio, CEP 04455-360, São Paulo - SP.
                 </small>
             </footer>
-
-            <button id="btnTopFixed" 
-                onclick="FunctionsSyncSystem.scrollToTarget('anchorTop');" 
-                    class="ss-frontend-shadow01 ss-frontend-btn-top-fixed" 
-                    style="visibility: hidden;">
-                <i class="fas fa-caret-up"></i>
-            </button>
-            <script>
-                // Scroll listener.
-                document.addEventListener('scroll', (e) => {
-                    // Button back to top.
-                    elementShowByPosition('btnTopFixed', 'top', '50');
-
-
-                    // Header sticky logic.
-                    let elementHeader = document.getElementById("layoutHeader");
-                    let elementMain = document.getElementById("layoutMain");
-                    let scrollValueRef = elementHeader.offsetHeight;
-
-                    if (window.pageYOffset > scrollValueRef) {
-                        elementHeader.classList.add('ss-frontend-layout-header-stiky'); // add sticky css
-                        elementMain.style.marginTop = scrollValueRef + 'px'; // adjust the margin of the content element to the height of the header
-                    } else {
-                        elementHeader.classList.remove('ss-frontend-layout-header-stiky');
-                        elementMain.style.marginTop = '0px';
-                    }
-
-
-                    // Debug.
-                    console.log('elementHeader', elementHeader);
-                    console.log('scrollValueRef', scrollValueRef);
-                    console.log('window.pageYOffset', window.pageYOffset);
-                });
-            </script>
         </div>
 
         

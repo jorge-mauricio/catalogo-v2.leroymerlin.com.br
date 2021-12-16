@@ -114,8 +114,6 @@ html, body {
     background-attachment: fixed;
     background-position: center 70px;
     background-color: #f57d0a; */
-
-    scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -140,13 +138,6 @@ input, textarea, select {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-}
-
-button {
-    padding: 0px;
-    border-width: 0px;
-    border-style: outset;
-    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
 }
 
 button:focus {
@@ -191,13 +182,9 @@ button:focus {
     position: relative; 
     display: block; 
 
-    width: 100%;
-
-    
+    /*background-color: #ccc; */
     /*min-height: 195px;*/
     min-height: 150px;
-
-    background-color: #ffffff;
 
     /* 
     background-image: url(../app_files_layout/frontend-desktop-layout-head-bg1.png); 
@@ -206,7 +193,6 @@ button:focus {
     */
 
     border-top: 5px solid var(--ssFrontendDefaultColor);
-    z-index: 1;
 }
 .ss-frontend-layout-header01 > div:nth-of-type(1) {
     position: relative; 
@@ -224,35 +210,7 @@ button:focus {
     transform: translate(-50%, -50%); 
 } /* Logo. */
 
-.ss-frontend-layout-header-stiky {
-    position: fixed; 
 
-
-    -webkit-animation: fadein 500ms; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 500ms; /* Firefox < 16 */
-        -ms-animation: fadein 500ms; /* Internet Explorer */
-         -o-animation: fadein 500ms; /* Opera < 12.1 */
-            animation: fadein 500ms;
-}
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
 
 .ss-frontend-layout-header-logo {
     position: relative; 
@@ -855,43 +813,6 @@ button:focus {
     background-image: url(../app_files_layout/frontend-layout-btn-top-a.png);
 }*/
 
-.ss-frontend-btn-top-fixed {
-    position: fixed;
-    display: block;
-
-    /*right: 10px;*/
-    bottom: 50px;
-    left: 50%;
-    transform: translate(-50%, 0); 
-
-    width: 40px; 
-    height: 40px;
-    line-height: 0px;
-
-    font-size: 40px;
-
-    color: #ffffff;
-    background-color: #72bf44;
-
-    border-radius: 20px;
-
-    cursor: pointer;
-    margin-left: 480px;
-
-    /*z-index: 9999;*/
-}
-.ss-frontend-btn-top-fixed:hover {
-    color: #72bf44;
-    background-color: #ececec;
-}
-@media (max-width: 1014px) {
-    .ss-frontend-btn-top-fixed {
-        right: 10px;
-        left: initial;
-        transform: initial;
-    }
-}
-
 .ss-frontend-btn-generic-bg01 {
     position: relative;
     display: inline-block;
@@ -1028,10 +949,6 @@ button:focus {
     /* background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(255,0,0,0.7)); */ /* transparent */
     
     /* background: repeating-linear-gradient(to left, #74ABDD, #78c3ae 49.9%, #0000ff, #000000000 50.1%); */ /* with limitations */
-}
-
-.ss-frontend-shadow01 {
-    box-shadow: 3px 3px 10px #000000;
 }
 
 .ss-frontend-flip01 {
@@ -3430,9 +3347,6 @@ flex-wrap: wrap;
     mix-blend-mode: soft-light;
     pointer-events: none;
 }
-[id^=ssFrontendFilesImagesGalleryMosaicLightbox01-] .title > div > div:nth-of-type(2) {
-  font-size: 0.7em !important;
-}
 [id^=ssFrontendFilesImagesGalleryMosaicLightbox01-] img {
     max-height: 90vh;
     max-width: 100%;
@@ -3444,7 +3358,7 @@ flex-wrap: wrap;
 }
 [id^=ssFrontendFilesImagesGalleryMosaicLightbox01-] a.close {
     position: absolute;
-    display: none; /*flex*/
+    display: flex;
     align-items: center;
     justify-content: center;
 
@@ -4673,7 +4587,7 @@ flex-wrap: wrap;
     left: 50%; 
 
     margin-top: 0px; /* related to height (ss-frontend-dashboard-popup) */  
-    margin-left: -210px; /* related to width (ss-frontend-dashboard-popup) */
+    margin-left: -160px; /* related to width (ss-frontend-dashboard-popup) */
 }
 .ss-frontend-dashboard-popup {
     position: absolute;
@@ -4683,7 +4597,7 @@ flex-wrap: wrap;
     left: 0px;
     right: 0px;
 
-    width: 420px;
+    width: 320px;
     height: 500px;
 
     background-color: #ffffff;
@@ -4707,14 +4621,6 @@ flex-wrap: wrap;
     box-shadow: 3px 3px 4px #969696;
 
     border-radius: 0px;
-}
-@media (max-width: 767px) {
-    .ss-frontend-dashboard-popup-container {
-        margin-left: -150px; /* related to width (ss-frontend-dashboard-popup) */
-    }
-    .ss-frontend-dashboard-popup {
-        width: 300px;
-    }
 }
 .ss-frontend-dashboard-popup > div:nth-of-type(1) {
     /* Attention to upper wrapper overflow: auto; */

@@ -247,6 +247,11 @@ const htmlGenericStyle01 = (idHTML: string, styleName: string, parameterValue: s
       elementHTML.style.setProperty(styleName, parameterValue, 'important');
     }
 
+    // visibility
+    if (styleName === 'visibility') {
+      elementHTML.style.setProperty(styleName, parameterValue, 'important');
+    }
+
     // height
     if (styleName === 'height') {
       // elementHTML.style.height = parameterValue;
