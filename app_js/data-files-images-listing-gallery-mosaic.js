@@ -402,7 +402,7 @@
                   
                   <img 
                     src="${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file_thumbnail}"
-                    alt="${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].title}"
+                    alt="Imagem do Produto"
                     class="
                     ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small2 === 1 ?
                       ` ss-frontend-files-images-gallery-mosaic-thumbnail-image1`
@@ -489,7 +489,7 @@
               <div class="ss-frontend-files-images-gallery-mosaic01-popup" style="cursor: default;">
                   <img 
                     src="${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file}" 
-                    alt="${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].title}" 
+                    alt="Imagem do Produto" 
                   />
                   <div class="title">
                       <div style="float: left; margin-right: 200px;">

@@ -455,7 +455,7 @@ button:focus {
     text-align: center;
     /* text-decoration: none; */
 
-    color: var(--ssFrontendDefaultColor);
+    color: var(--ssFrontendDefaultColor) !important;
     background-color: #ececec;
 
     border-radius: 8px;
@@ -1217,6 +1217,27 @@ button:focus {
     .ss-frontend-text01 {
         padding: 5px;
     }   
+
+    .ss-frontend-social-media-layout {
+        position: fixed; 
+        display: none; 
+    
+        right: 0px; 
+        top: 0px; 
+    
+        width: 60px; 
+        height: 100%; 
+    
+        background-color: #ffffff; 
+        box-shadow: 3px 3px 10px #969696;
+    
+        overflow: hidden; 
+        z-index: 9999; 
+    }
+
+    .ss-frontend-social-media-layout > a {
+        margin-top: 5px;
+    }
 }
 
 
@@ -3074,6 +3095,7 @@ flex-wrap: wrap;
     }
 }
 
+/**/
 @media (max-width: 520px) {
     .ss-frontend-files-images-gallery-mosaic01 {
         display: flex;
@@ -3082,11 +3104,11 @@ flex-wrap: wrap;
         justify-content: center;
     }
     .ss-frontend-files-images-gallery-mosaic01 > div {
-        width: 100%;
+        width: 46%;
 
         min-height: 200px;
 
-        margin: 1%;
+        margin: 0%;
     }
 }
 
@@ -3370,6 +3392,204 @@ flex-wrap: wrap;
     transform: translate(0, -50%);
     left: 10px;
 }/* middle/left */
+
+
+@media (max-width: 520px) {
+    .ss-frontend-files-images-gallery-mosaic-thumbnail-image1 {
+        position: absolute;
+        display: block;
+
+        top: 10px;
+        left: 50%; 
+        transform: translate(-50%, 0);
+        bottom: initial;
+        right: initial;
+    }/* top/left */
+    .ss-frontend-files-images-gallery-mosaic-thumbnail-image2 {
+        position: absolute;
+        display: block;
+
+        top: 10px;
+        left: 50%; 
+        transform: translate(-50%, 0);
+        bottom: initial;
+        right: initial;
+    }/* top/center */
+    .ss-frontend-files-images-gallery-mosaic-thumbnail-image3 {
+        position: absolute;
+        display: block;
+
+        top: 10px;
+        left: 50%; 
+        transform: translate(-50%, 0);
+        bottom: initial;
+        right: initial;
+    }/* top/right */
+    .ss-frontend-files-images-gallery-mosaic-thumbnail-image4 {
+        position: absolute;
+        display: block;
+
+        top: 10px;
+        left: 50%; 
+        transform: translate(-50%, 0);
+        bottom: initial;
+        right: initial;
+    }/* middle/right */
+    .ss-frontend-files-images-gallery-mosaic-thumbnail-image5 {
+        position: absolute;
+        display: block;
+
+        top: 10px;
+        left: 50%; 
+        transform: translate(-50%, 0);
+        bottom: initial;
+        right: initial;
+    }/* bottom/right */
+    .ss-frontend-files-images-gallery-mosaic-thumbnail-image6 {
+        position: absolute;
+        display: block;
+
+        top: 10px;
+        left: 50%; 
+        transform: translate(-50%, 0);
+        bottom: initial;
+        right: initial;
+    }/* bottom/center */
+    .ss-frontend-files-images-gallery-mosaic-thumbnail-image7 {
+        position: absolute;
+        display: block;
+
+        top: 10px;
+        left: 50%; 
+        transform: translate(-50%, 0);
+        bottom: initial;
+        right: initial;
+    }/* bottom/left */
+    .ss-frontend-files-images-gallery-mosaic-thumbnail-image8 {
+        position: absolute;
+        display: block;
+
+        top: 10px;
+        left: 50%; 
+        transform: translate(-50%, 0);
+        bottom: initial;
+        right: initial;
+    }/* middle/left */
+
+    .ss-frontend-files-images-gallery-mosaic-thumbnail-text1 {
+        position: absolute;
+        display: block;
+
+        top: initial;
+        left: 50%; 
+        transform: translate(-50%, 0);
+        bottom: 10px;
+        right: initial;
+
+        width: 100%;
+
+        text-align: center;
+    }/* top/left */
+    .ss-frontend-files-images-gallery-mosaic-thumbnail-text2 {
+        position: absolute;
+        display: block;
+
+        top: initial;
+        left: 50%; 
+        transform: translate(-50%, 0);
+        bottom: 10px;
+        right: initial;
+
+        width: 100%;
+
+        text-align: center;
+    }/* top/center */
+    .ss-frontend-files-images-gallery-mosaic-thumbnail-text3 {
+        position: absolute;
+        display: block;
+
+        top: initial;
+        left: 50%; 
+        transform: translate(-50%, 0);
+        bottom: 10px;
+        right: initial;
+
+        width: 100%;
+
+        text-align: center;
+    }/* top/right */
+    .ss-frontend-files-images-gallery-mosaic-thumbnail-text4 {
+        position: absolute;
+        display: block;
+
+        top: initial;
+        left: 50%; 
+        transform: translate(-50%, 0);
+        bottom: 10px;
+        right: initial;
+
+        width: 100%;
+
+        text-align: center;
+    }/* middle/right */
+    .ss-frontend-files-images-gallery-mosaic-thumbnail-text5 {
+        position: absolute;
+        display: block;
+
+        top: initial;
+        left: 50%; 
+        transform: translate(-50%, 0);
+        bottom: 10px;
+        right: initial;
+
+        width: 100%;
+
+        text-align: center;
+    }/* bottom/right */
+    .ss-frontend-files-images-gallery-mosaic-thumbnail-text6 {
+        position: absolute;
+        display: block;
+
+        top: initial;
+        left: 50%; 
+        transform: translate(-50%, 0);
+        bottom: 10px;
+        right: initial;
+
+        width: 100%;
+
+        text-align: center;
+    }/* bottom/center */
+    .ss-frontend-files-images-gallery-mosaic-thumbnail-text7 {
+        position: absolute;
+        display: block;
+
+        top: initial;
+        left: 50%; 
+        transform: translate(-50%, 0);
+        bottom: 10px;
+        right: initial;
+
+        width: 100%;
+
+        text-align: center;
+    }/* bottom/left */
+    .ss-frontend-files-images-gallery-mosaic-thumbnail-text8 {
+        position: absolute;
+        display: block;
+
+        top: initial;
+        left: 50%; 
+        transform: translate(-50%, 0);
+        bottom: 10px;
+        right: initial;
+
+        width: 100%;
+
+        text-align: center;
+    }/* middle/left */
+}
+
 
 
 /*.ss-frontend-files-images-gallery-mosaic01 div,
