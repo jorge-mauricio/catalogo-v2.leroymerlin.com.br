@@ -213,9 +213,9 @@ button:focus {
     display: block; 
 
     max-width: 1015px;
-    margin: auto;
+    margin: -10px auto 0px auto;
 }
-.ss-frontend-layout-header01 > a {
+.ss-frontend-layout-header01 > a:nth-of-type(1) {
     position: absolute; 
     display: block; 
 
@@ -278,14 +278,13 @@ button:focus {
 
     margin-top: -70px; 
 }
-
 .ss-frontend-layout-shortcuts-layout {
 
 }
 
 .ss-frontend-layout-header-nav {
-    /*position: absolute !important; 
-    bottom: 0px !important;*/
+    position: absolute !important; 
+    bottom: 0px !important;
 }
 
 .ss-frontend-layout-footer01 {
@@ -860,7 +859,7 @@ button:focus {
     display: block;
 
     /*right: 10px;*/
-    bottom: 50px;
+    bottom: 30px;
     left: 50%;
     transform: translate(-50%, 0); 
 
@@ -1159,6 +1158,10 @@ button:focus {
 /* Layout - mobile. */
 /* ************************************************************************************** */
 @media (max-width: 767px) {
+    .ss-frontend-layout-header01 {
+        min-height: 50px;
+        border-top: 3px solid var(--ssFrontendDefaultColor);
+    }
     .ss-frontend-layout-header01 > div:nth-of-type(1) {
         position: relative; 
         display: block; 
@@ -1176,19 +1179,19 @@ button:focus {
         /*width: 256px; 
         height: 154px; */
 
-        width: 166px; 
-        height: 100px; 
+        width: 60px; 
+        height: 36px; 
 
         background-image: url(../app_files_layout/frontend-desktop-logo.png); 
         background-repeat: no-repeat;
         background-size: contain;
 
-        margin: 10px auto 0px auto;
+        margin: 15px auto 0px auto;
     }
 
     .ss-frontend-social-media-layout {
         position: relative; 
-        display: block; 
+        display: none; 
 
         /*bottom: 0px;
         right: 0px;*/
@@ -1197,12 +1200,12 @@ button:focus {
 
         text-align: center;
 
-        margin-top: 10px;
+        margin-top: 0px;
     }    
 
     .ss-frontend-layout-header-graphic1 {
         position: relative; 
-        display: block; 
+        display: none; 
 
         /*height: 100px;*/
 
@@ -1223,7 +1226,7 @@ button:focus {
     position: absolute; 
     display: block; 
 
-    top: 4px;
+    top: 0px;
     left: 4px;
 
     width: 35px; 
@@ -1235,29 +1238,57 @@ button:focus {
     font-weight: lighter;
     text-align: center;
 
-    color: #fd577f !important;
-    background-color: #012640;
+    color: #ffffff !important;
+    background-color: #72bf44;
 
-    border-radius: 3px;
+    border-radius: 5px;
 
     cursor: pointer;
 }
 .ss-frontend-mobile-layout-header-nav-menu:hover {
-    color: #3be0f4 !important;
-    background-color: #012640;
+    color: #ffffff !important;
+    background-color: #72bf44;
+}
+
+.ss-frontend-mobile-layout-header-address-menu {
+    position: absolute; 
+    display: block; 
+
+    top: 0px;
+    right: 4px;
+
+    width: 35px; 
+    height: 35px; 
+
+    line-height: 35px;
+
+    font-size: 24px;
+    font-weight: lighter;
+    text-align: center;
+
+    color: #ffffff !important;
+    background-color: #72bf44;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+.ss-frontend-mobile-layout-header-address-menu:hover {
+    color: #ffffff !important;
+    background-color: #72bf44;
 }
 
 .ss-frontend-mobile-layout-header-nav {
     position: fixed; 
     display: none; 
 
-    right: 0px; 
+    left: 0px; 
     top: 0px; 
 
     width: 200px; 
     height: 100%; 
 
-    background-color: #f1f2f2; 
+    background-color: #ffffff; 
     box-shadow: 3px 3px 10px #969696;
 
     overflow: hidden; 
@@ -1300,13 +1331,13 @@ button:focus {
 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px !important;
-    color: #78c3ae !important;
+    color: var(--ssFrontendDefaultColor) !important;
     text-decoration: none;
 
     cursor: pointer;
 }
 .ss-frontend-mobile-links01:hover {
-    color: #0000ff !important;
+    color: #72bf44 !important;
 }
 
 .ss-frontend-mobile-links-layout01
@@ -1321,7 +1352,7 @@ button:focus {
     
     padding-left: 20px; 
     
-    border-bottom: 1px solid #cccccc;
+    border-bottom: 1px solid var(--ssFrontendDefaultColor);
 }
 
 /* Reorder nav links (mobile). */
@@ -4714,6 +4745,7 @@ flex-wrap: wrap;
     }
     .ss-frontend-dashboard-popup {
         width: 300px;
+        height: 400px;
     }
 }
 .ss-frontend-dashboard-popup > div:nth-of-type(1) {
