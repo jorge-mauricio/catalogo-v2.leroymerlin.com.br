@@ -282,25 +282,9 @@ button:focus {
 
 }
 
-.ss-frontend-layout-header-intro {
-    position: relative;
-    display: inline-block;
-    width: 49%;
-}
-@media (max-width: 767px) {
-    .ss-frontend-layout-header-intro {
-        width: 100%;
-    }
-}
 .ss-frontend-layout-header-nav {
-    /*position: absolute !important; 
-    bottom: 0px !important;*/
-
-    position: relative;
-    display: inline-block;
-    width: 49% !important;
-    float: right;
-    margin-top: 15px;
+    position: absolute !important; 
+    bottom: 0px !important;
 }
 
 .ss-frontend-layout-footer01 {
@@ -802,8 +786,8 @@ button:focus {
     text-decoration: none;
 }
 .ss-frontend-btn-action-layout {
-    margin: 10px auto 0px auto;
-    /*margin-top: 10px;*/
+    margin-top: 10px;
+
 }
 .ss-frontend-btn-action-alert {
     color: #ffffff !important;
@@ -1013,13 +997,10 @@ button:focus {
     display: flex; 
 
     flex-flow: row wrap; 
-    justify-content: space-between;
+    justify-content: space-around; 
     flex-wrap: wrap; 
-    align-items: center;
-
 
     width: 100%; 
-    text-align: center;
 
     overflow: hidden;
     clear: both;
