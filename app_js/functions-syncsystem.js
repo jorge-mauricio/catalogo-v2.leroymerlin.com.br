@@ -429,6 +429,7 @@ var dataHTMLCopy = function (idElementOrigin, idElementTarget, idElementOriginMe
                 if (idElementOriginMethod === 'outter') {
                     elementTarget.innerHTML += elementOrigin.outerHTML;
                 }
+                //elementOrigin.style.setProperty('display', 'flex', 'important');
             }
         }
     }

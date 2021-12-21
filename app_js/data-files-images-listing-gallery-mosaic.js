@@ -318,8 +318,14 @@
             }
           "
             style="
-              grid-column: span ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].grid_column}; 
-              grid-row: span ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].grid_row};
+              --ssFrontendFilesGalleryMosaicGridColumn: span ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].grid_column};
+              --ssFrontendFilesGalleryMosaicGridRow: span ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].grid_row};
+
+              --ssFrontendFilesGalleryMosaicMobileGridColumn: span ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].grid_column_mobile};
+              --ssFrontendFilesGalleryMosaicMobileGridRow: span ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].grid_row_mobile};
+
+              --ssFrontendFilesGalleryMosaicPopupGridColumn: span ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].grid_column_mobile};
+              --ssFrontendFilesGalleryMosaicPopupGridRow: span ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].grid_row_mobile};
               ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].number_small1 === 3 ?
                 `
                 background-image: url(${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file});
@@ -448,9 +454,11 @@
                     style="
                     ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file_thumbnail_width.includes('px') ?
                     `
-                      width: ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file_thumbnail_width};
+                      --ssFrontendFilesGalleryMosaicImageWidth: ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file_thumbnail_width}px;
+                      --ssFrontendFilesGalleryMosaicMobileImageWidth: ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file_thumbnail_mobile_width}px;
                     `:`
-                      width: ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file_thumbnail_width}%;
+                      --ssFrontendFilesGalleryMosaicImageWidth: ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file_thumbnail_width}%;
+                      --ssFrontendFilesGalleryMosaicMobileImageWidth: ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file_thumbnail_mobile_width}%;
                     `
                     }
                     "
@@ -490,14 +498,18 @@
                   <img 
                     src="${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].file}" 
                     alt="Imagem do Produto" 
+                    "
                   />
                   <div class="title">
                       <div style="float: left; margin-right: 200px;">
                         <div>
-                          ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].title} - ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].caption}
+                          ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].title}
                         </div>
                         <div>
                           ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].description}
+                        </div>
+                        <div>
+                          CÓDIGO: ${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].caption}
                         </div>
                       </div>
                       <a href="${dataJSObjetcFilesImegesGalleryMosaicListing.files[i].info_small1}" 

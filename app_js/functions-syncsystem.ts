@@ -442,6 +442,8 @@ const dataHTMLCopy = (idElementOrigin: string, idElementTarget: string, idElemen
         if (idElementOriginMethod === 'outter') {
           elementTarget.innerHTML += elementOrigin.outerHTML;
         }
+
+        elementOrigin.style.setProperty('display', 'flex', 'important');
       }
     }
   }

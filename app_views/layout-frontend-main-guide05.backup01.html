@@ -67,7 +67,7 @@ https://magic.reactjs.net/htmltojsx.htm
         <link rel="stylesheet" href="../app_fonts/fontawesome-free-5.15.4-web/css/all.css">
         
         <!--Style sheet (custom - single).-->
-        <link rel="stylesheet" type="text/css" href="../app_styles/styles-frontend.css?v=8" media="screen" title="Default" />
+        <link rel="stylesheet" type="text/css" href="../app_styles/styles-frontend.css?v=7" media="screen" title="Default" />
         
         <!--Style sheet (custom - reponsive - multiple).-->
         <!--link rel="stylesheet" type="text/css" href="../app_styles/styles-frontend.css" media="screen and (min-width: 991px)" title="Default" />
@@ -215,38 +215,25 @@ https://magic.reactjs.net/htmltojsx.htm
                             X Fechar
                         </a>
                         <a id="navLinkHome" 
-                            onclick="
-                            genericFilterByClassName('filersGeneric', '');
-                            genericFilterByClassName('', 'ss-frontend-files-images-gallery-popup');
-                            FunctionsSyncSystem.elementShowHideToggle('navMenu');
-                            FunctionsSyncSystem.scrollToTarget('anchorTop');"
+                            href="#" 
                             title="Home" 
                             class="ss-frontend-mobile-links01 ss-frontend-mobile-links-layout01">
                             Limpar Filtros
                         </a>
                         <a id="navLink1" 
-                            onclick="
-                            genericFilterByClassName('filersGeneric1', 'filersGeneric');
-                            FunctionsSyncSystem.elementShowHideToggle('navMenu');
-                            FunctionsSyncSystem.scrollToTarget('anchorTop');" 
+                            onclick="genericFilterByClassName('filersGeneric1', 'filersGeneric');" 
                             title="Link 1" 
                             class="ss-frontend-mobile-links01 ss-frontend-mobile-links-layout01">
                             Piscinas
                         </a>
                         <a id="navLink1" 
-                        onclick="
-                            genericFilterByClassName('filersGeneric2', 'filersGeneric');
-                            FunctionsSyncSystem.elementShowHideToggle('navMenu');
-                            FunctionsSyncSystem.scrollToTarget('anchorTop');" 
+                        onclick="genericFilterByClassName('filersGeneric2', 'filersGeneric');" 
                             title="Link 1" 
                             class="ss-frontend-mobile-links01 ss-frontend-mobile-links-layout01">
                             Acessórios
                         </a>
                         <a id="navLink1" 
-                            onclick="
-                            genericFilterByClassName('filersGeneric1', 'filersGeneric');
-                            FunctionsSyncSystem.elementShowHideToggle('navMenu');
-                            FunctionsSyncSystem.scrollToTarget('anchorTop');" 
+                            onclick="genericFilterByClassName('filersGeneric1', 'filersGeneric');" 
                             title="Link 1" 
                             class="ss-frontend-mobile-links01 ss-frontend-mobile-links-layout01">
                             Tratamentos
@@ -343,8 +330,7 @@ https://magic.reactjs.net/htmltojsx.htm
                               elementsHide = document.querySelectorAll("." + classNameHide);
 
                               for (let i = 0; i < elementsHide.length; i++) {
-                                //elementsHide[i].style.setProperty('display', 'none', 'important');
-                                elementsHide[i].style.setProperty('display', 'none');
+                                elementsHide[i].style.setProperty('display', 'none', 'important');
                               }
                             }
                             
@@ -392,7 +378,7 @@ https://magic.reactjs.net/htmltojsx.htm
                         <script src="../app_js/data-filters-generic-import.js?v=10"></script>
                         <script src="../app_js/data-filters-generic-listing.js?v=10"></script>
                         <script src="../app_js/data-files-images-import.js?v=10"></script>
-                        <script src="../app_js/data-files-images-listing-gallery-mosaic.js?v=12"></script>
+                        <script src="../app_js/data-files-images-listing-gallery-mosaic.js?v=11"></script>
                     </section>
                 </div>
             </main>
@@ -438,9 +424,9 @@ https://magic.reactjs.net/htmltojsx.htm
 
 
                     // Debug.
-                    // console.log('elementHeader', elementHeader);
-                    // console.log('scrollValueRef', scrollValueRef);
-                    // console.log('window.pageYOffset', window.pageYOffset);
+                    console.log('elementHeader', elementHeader);
+                    console.log('scrollValueRef', scrollValueRef);
+                    console.log('window.pageYOffset', window.pageYOffset);
                 });
             </script>
         </div>
